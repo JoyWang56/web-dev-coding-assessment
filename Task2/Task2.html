@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Task2</title>
+    <meta name="author" content="Joy">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body >
+    <div class="container-fluid">
+      <!-- TITLE -->
+      <div class="row">
+        <div class="col-md-12">
+          <h1> Customer Information </h1>
+        </div>  
+      </div>
+      <!-- TITLE END  -->
+      <!-- Upload Information  -->
+      <div class="row">
+        <div class="col-md-12">
+          <form id="newuser" onsubmit="return addinfo();" method="post" class="form-horizontal">
+            <p style="color:red; font-size:20px"> **Please Must Be Filled Name & Email ! **</p>
+            <div class="form-group"> 
+              <label for="name" class="col-sm-2 control-label">
+                Name <span style="color:red"><strong>*</strong></span>: 
+              </label>
+              <div class="col-sm-6">
+                <input type="text" class="form-control" name="nameinput" id="nameinput" placeholder="Joy" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="color" class="col-sm-2 control-label">
+                Favorite Color:
+              </label>
+              <div class="col-sm-6">
+                <input type="text" class="form-control" name="colorinput" id="colorinput" placeholder="pink">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="pet" class="col-sm-2 control-label">
+                Favorite Pet:
+              </label>
+              <div class="col-sm-6">
+                <input type="text" class="form-control" name="petinput" id="petinput" placeholder="dog">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="birthday" class="col-sm-2 control-label">
+                Birthday:
+              </label>
+              <div class="col-sm-6">
+                <input type="text"  class="form-control" name="birthdayinput" id="birthdayinput" placeholder="05/06/1992">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="color" class="col-sm-2 control-label">
+                Email <span style="color:red"><strong>*</strong></span>:
+              </label>
+              <div class="col-sm-6">
+                <input type="email" class="form-control" name="emailinput" id="emailinput" placeholder="luckyjoy@gmail.com" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="color" class="col-sm-2 control-label">
+                Phone Number:
+              </label>
+              <div class="col-sm-6">
+                <input type="text" class="form-control" name="phoneinput" id="phoneinput" placeholder="412 123 4567" >
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                <input type="submit" value="Add" >
+              </div>
+            </div>
+          </form>
+        </div>
+      </div> 
+      <hr>    
+      <p style="color:red; font-size:20px"> **Please Click Headers to DESCENDING Sort Table After Adding Information**</p>
+      <div class="row">
+        <div class="col-md-12">
+          <table class="table" id="customerinfo">
+            <tr>
+              <!-- Click headers to stort table -->
+              <th onclick="sorttable(0)">Name</th>
+              <th onclick="sorttable(1)">Favorite Color</th>
+              <th onclick="sorttable(2)">Favorite Pet</th>
+              <th onclick="sorttable(3)">Birthday</th>
+              <th onclick="sorttable(4)">Email</th>
+              <th onclick="sorttable(5)">Phone Number</th>
+            </tr>
+            <tr>  
+            </tr>
+          </table>
+      </div>
+    </div>
+    <script src="Task2.js"></script>
+  </body>
+</html>
