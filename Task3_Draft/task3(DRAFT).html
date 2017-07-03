@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Task3</title>
+
+    <meta name="author" content="Joy">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+      a.log:link {
+        text-decoration: underline;
+        color:white;
+       }
+      a.log:hover {
+        text-decoration: underline;
+        color:white;
+       }
+      #viewall{
+        text-decoration: none;
+        color:#6a1b9a;
+       }
+      #header{
+      	background-color:#5a0881;
+      }
+      input#search{
+      	background-image:url();
+      }
+      #navigator2{
+        width: 250px;
+        height:240px
+        position: fixed;
+        left: auto; 
+        right: 10px;
+        }
+    .modal-header{
+    	background-color:#6a1b9a;
+    	color:white;
+    	font-weight: bold;
+    }
+    #siderbar{
+    	color:white;
+    	text-decoration: none;
+    }
+    #hint{
+    	position:absolute;
+    	top:3%;
+    	background-color:#6a1b9a;
+    	width:50%;
+    	height:auto;
+        font-size:100%;
+    }
+    #realcard{
+    	width:95%;
+    	padding-left:3%;
+    }
+    #cardlist{
+    	padding-left:25%;
+    }
+    #sellgiftcard{
+        background-image:url(https://d3lh2hqqgsec27.cloudfront.net/Homepage/sellbg.jpg);
+        color:white;
+        padding:2%;
+   }
+    </style>
+</head>
+<body>
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="row" id="header">
+				<div class="col-md-12">
+					<div class="row">
+						<div class="col-md-4">
+							<img alt="giftcardgranny" src="https://d3lh2hqqgsec27.cloudfront.net/Current/gift-card-granny-logo.png" style="padding-left:10%">
+						</div>
+						<div class="col-md-8">
+						    <form action="search.php" method="post" >
+						        <div class="form-group" style="padding-top:5%">
+						            <div class="col-sm-8">
+						                <div class="inner-addon right-addon">
+                                            <input type="text" id="search" class="form-control" placeholder="Search from 347,105 Gift Cards" />
+                                            <i class="glyphicon glyphicon-search"></i>
+                                        </div>
+						            </div>
+						        </div> 
+					        </form>
+					        <div class="col-md-3" style="float:right;">
+					        <a href="login.html" target="_blank" class="log">Log In</a>
+                            <span style="color:grey">|</span>
+							<a href="signup.html" target="_blank" class="log"><strong>Sign Up Now!</strong></a>
+							</div>
+						</div>	
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row" style="background-color:#3d1059;">
+		<div class="col-md-12"> 
+			<!-- <nav class="navbar" role="navigation"> -->
+				<!-- <div class="collapse navbar-collapse" id="navigator"> -->
+					<ul class="nav navbar-nav">
+						<li>
+							<a style="color:white;font-weight: bold;" href="#">DISCOUNT GIFT CARDS</a>
+						</li>
+						<li>
+							<a style="color:white; font-weight: bold;" href="#">SECRET DEALS</a>
+						</li>
+						<li >
+							<a style="color:white; font-weight: bold;" href="#">EARN FREE GIFT CARDS</a>
+						</li>
+						<li>
+							<a style="color:white; font-weight: bold;" href="#">DISCOUNT GIFT CARDS</a>
+						</li>
+						<li>
+							<a style="color:white; font-weight: bold;" href="#">CONSUMER PROTECTION</a>
+						</li>
+						<li>
+							<button type="button" class="btn btn-link" data-toggle="modal" data-target="#navigator2" style="color:white; font-weight: bold;text-decoration:none; float:right"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+			                More
+		                    </button>
+		                
+		                    <!-- modal -->
+		                    <div class="modal right fade" id="navigator2" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				                <div class="modal-dialog">
+					                <div class="col-md-6">
+						                <div class="modal-header">
+						                   <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color: white;">
+								            ×
+							                </button>
+							                <a id="siderbar" href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Log In Or Creat An Account</a>
+						                </div>
+						                <div class="modal-header">
+							                <a id="siderbar" href="#"><span class="glyphicon glyphicon-credit-card" aria-hidden="true"></span> Discount Gift Cards</a>
+						                </div>
+						                <div class="modal-header">
+							                <a id="siderbar" href="#"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span> Secret Deals</a>
+						                </div>
+						                <div class="modal-header">
+							                <a id="siderbar" href="#"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Earn Free Gift Cards</a>
+						                </div>
+						                <div class="modal-header">
+							                <a id="siderbar" href="#"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Consumer Protection</a>
+						                </div>
+						                <div class="modal-header">
+							                <a id="siderbar" href="#"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Sell Gift Cards</a>
+						                </div>
+						                <div class="modal-header">
+							                <a id="siderbar" href="#"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Corporate/ Bulk</a>
+						                </div>
+						                <div class="modal-header">
+							                <a id="siderbar" href="#"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Gift Card Balance</a>
+						                </div>
+						                <div class="modal-header">
+							                <a id="siderbar" href="#"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Markets</a>
+						                </div>
+						                <div class="modal-header">
+							                <a id="siderbar" href="#"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Money Saving Blog</a>
+						                </div>
+						                <div class="modal-header">
+							                <a id="siderbar" href="#"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Press & Media</a>
+						                </div>
+						              <!--   <div class="modal-footer" style="background-color:#3d1059">
+						                    <div class="col-sm-4">
+                                                <a style="color:white; font-weight: bold;" href="#">Granny's</a> 
+                                            </div>
+                                            <div class="col-sm-1">
+                                                <a href="https://itunes.apple.com/app/apple-store/id703155858?pt=117789344&amp;ct=store-pages&amp;mt=8">
+                                                    <img src="https://d1kqvlgzmws3jc.cloudfront.net/v13-17-1-rc-5/images/apple.png" alt="apple" style="width:50px">
+                                                </a> 
+                                            </div>
+                                            <div class="col-sm-2">
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="https://play.google.com/store/apps/details?id=com.kinoli.giftcardgranny">
+                            	                    <img src="https://d1kqvlgzmws3jc.cloudfront.net/v13-17-1-rc-5/images/google.png" alt="google paly" style="width:50px">
+                                                </a> 
+                                            </div>
+						                </div> -->
+					                </div>
+					             </div>
+					        </div>
+		                    <!-- modal end -->
+					    </li>
+					</ul>
+					
+		</div>
+	</div>
+	<div class="row">
+        <div class="col-md-12">
+            <h1 style="text-align: center">Discount Gift Cards</h1>
+        </div>
+	</div>
+	<!-- Card List -->
+	<div class="row" id="cardlist">
+	    <div class="col-md-12">
+	      <div class="card-deck">
+	        <div class="col-md-3">
+		        <div class="card" style="width: 20rem;">
+		            <span id="hint" class="badge badge-info badge-large"><i class="glyphicon glyphicon-arrow-up"> </i> 15% OFF</span>
+                    <img class="card-img-top" src="https://d3lh2hqqgsec27.cloudfront.net/merchant-images/lg/gamestop.png" alt="Card image cap" id="realcard">
+                    <div class="card-block">
+                        <a href="#" id="cardname">GameStop Gift Card</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+		        <div class="card" style="width: 20rem;">
+		            <span id="hint" class="badge badge-info badge-large"><i class="glyphicon glyphicon-arrow-up"> </i> 6% OFF</span>
+                    <img class="card-img-top" src="https://d3lh2hqqgsec27.cloudfront.net/merchant-images/lg/apple.png" id="realcard">
+                    <div class="card-block">
+                        <a href="#" id="cardname">Apple (Not iTunes)</a>
+                    </div>
+                </div>
+            </div>
+           <div class="col-md-3">
+		        <div class="card" style="width: 20rem;">
+		            <span id="hint" class="badge badge-info badge-large"><i class="glyphicon glyphicon-arrow-up"> </i> 8% OFF</span>
+                    <img class="card-img-top" src="https://d3lh2hqqgsec27.cloudfront.net/merchant-images/lg/netflix.png" alt="Card image cap" id="realcard">
+                    <div class="card-block">
+                        <a href="#" id="cardname">Netflix Gift Card</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+		        <div class="card" style="width: 20rem;">
+		            <span id="hint" class="badge badge-info badge-large"><i class="glyphicon glyphicon-arrow-up"> </i>2% OFF</span>
+                    <img class="card-img-top" src="https://d3lh2hqqgsec27.cloudfront.net/merchant-images/lg/kroger.png" id="realcard">
+                    <div class="card-block">
+                        <a href="#" id="cardname">  Kroger Gift Card</a>
+                    </div>
+                </div>
+            </div>
+          </div>
+	    </div>
+	</div>
+	<br>
+	<div class="row" id="cardlist">
+	    <div class="col-md-12">
+	      <div class="card-deck">
+	        <div class="col-md-3">
+		        <div class="card" style="width: 20rem;">
+		            <span id="hint" class="badge badge-info badge-large"> 3% OFF</span>
+                    <img class="card-img-top" src="https://d3lh2hqqgsec27.cloudfront.net/merchant-images/lg/amazoncom.png" alt="Card image cap" id="realcard">
+                    <div class="card-block">
+                        <a href="#" id="cardname">Amazon Gift Card</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+		        <div class="card" style="width: 20rem;">
+		            <span id="hint" class="badge badge-info badge-large"> 5% OFF</span>
+                    <img class="card-img-top" src="https://d3lh2hqqgsec27.cloudfront.net/merchant-images/lg/target_gc.png" id="realcard">
+                    <div class="card-block">
+                        <a href="#" id="cardname">Target Gift Cards</a>
+                    </div>
+                </div>
+            </div>
+           <div class="col-md-3">
+		        <div class="card" style="width: 20rem;">
+		            <span id="hint" class="badge badge-info badge-large"> 3% OFF</span>
+                    <img class="card-img-top" src="https://d3lh2hqqgsec27.cloudfront.net/merchant-images/lg/walmart.png" alt="Card image cap" id="realcard">
+                    <div class="card-block">
+                        <a href="#" id="cardname">Walmart Gift Card</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+		        <div class="card" style="width: 20rem;">
+		            <span id="hint" class="badge badge-info badge-large"> 9% OFF</span>
+                    <img class="card-img-top" src="https://d3lh2hqqgsec27.cloudfront.net/merchant-images/lg/itunes.png" id="realcard">
+                    <div class="card-block">
+                        <a href="#" id="cardname">  iTunes Gift Card</a>
+                    </div>
+                </div>
+            </div>
+          </div>
+	    </div>
+	</div>
+	<br>
+	<div class="row" id="cardlist">
+	    <div class="col-md-12">
+	      <div class="card-deck">
+	        <div class="col-md-3">
+		        <div class="card" style="width: 20rem;">
+		            <span id="hint" class="badge badge-info badge-large"> 16% OFF</span>
+                    <img class="card-img-top" src="https://d3lh2hqqgsec27.cloudfront.net/merchant-images/lg/starbucks.png" alt="Card image cap" id="realcard">
+                    <div class="card-block">
+                        <a href="#" id="cardname">Startbucks Gift Card</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+		        <div class="card" style="width: 20rem;">
+		            <span id="hint" class="badge badge-info badge-large"> 5% OFF</span>
+                    <img class="card-img-top" src="https://d3lh2hqqgsec27.cloudfront.net/merchant-images/lg/best-buy.png" id="realcard">
+                    <div class="card-block">
+                        <a href="#" id="cardname">Best Buy Gift Card</a>
+                    </div>
+                </div>
+            </div>
+           <div class="col-md-3">
+		        <div class="card" style="width: 20rem;">
+		            <span id="hint" class="badge badge-info badge-large"> 3% OFF</span>
+                    <img class="card-img-top" src="https://d3lh2hqqgsec27.cloudfront.net/merchant-images/lg/ebay.png" alt="Card image cap" id="realcard">
+                    <div class="card-block">
+                        <a href="#" id="cardname">eBay Gift Card</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+		        <div class="card" style="width: 20rem;">
+		            <span id="hint" class="badge badge-info badge-large"> 11% OFF</span>
+                    <img class="card-img-top" src="https://d3lh2hqqgsec27.cloudfront.net/merchant-images/lg/kohls.png" id="realcard">
+                    <div class="card-block">
+                        <a href="#" id="cardname">  Kohl's Gift Card</a>
+                    </div>
+                </div>
+            </div>
+          </div>
+	    </div>
+	</div>
+	<br>
+	<div class="row" id="cardlist">
+	    <div class="col-md-12">
+	      <div class="card-deck">
+	        <div class="col-md-3">
+		        <div class="card" style="width: 20rem;">
+		            <span id="hint" class="badge badge-info badge-large"> 2% OFF</span>
+                    <img class="card-img-top" src="https://d3lh2hqqgsec27.cloudfront.net/merchant-images/lg/home-depot.png" alt="Card image cap" id="realcard">
+                    <div class="card-block">
+                        <a href="#" id="cardname">Home Depot</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+		        <div class="card" style="width: 20rem;">
+		            <span id="hint" class="badge badge-info badge-large"> 5% OFF</span>
+                    <img class="card-img-top" src="https://d3lh2hqqgsec27.cloudfront.net/merchant-images/lg/lowes.png" id="realcard">
+                    <div class="card-block">
+                        <a href="#" id="cardname">Lowe's Gift Card</a>
+                    </div>
+                </div>
+            </div>
+           <div class="col-md-3">
+		        <div class="card" style="width: 20rem;">
+		            <span id="hint" class="badge badge-info badge-large"> 14% OFF</span>
+                    <img class="card-img-top" src="https://d3lh2hqqgsec27.cloudfront.net/merchant-images/lg/victorias-secret.png" alt="Card image cap" id="realcard">
+                    <div class="card-block">
+                        <a href="#" id="cardname">Victoria's Secret</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+		        <div class="card" style="width: 20rem;">
+		            <span id="hint" class="badge badge-info badge-large"> 9% OFF</span>
+                    <img class="card-img-top" src="https://d3lh2hqqgsec27.cloudfront.net/merchant-images/lg/sephora.png" id="realcard">
+                    <div class="card-block">
+                        <a href="#" id="cardname">  Sephora Gift Card</a>
+                    </div>
+                </div>
+            </div>
+          </div>
+	    </div>
+	</div>
+	<br>
+	<div class="row" id="cardlist">
+	    <div class="col-md-12">
+	      <div class="card-deck">
+	        <div class="col-md-3">
+		        <div class="card" style="width: 20rem;">
+		            <span id="hint" class="badge badge-info badge-large"> 5% OFF</span>
+                    <img class="card-img-top" src="https://d3lh2hqqgsec27.cloudfront.net/merchant-images/lg/google-play.png" alt="Card image cap" id="realcard">
+                    <div class="card-block">
+                        <a href="#" id="cardname">Google Play</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+		        <div class="card" style="width: 20rem;">
+		            <span id="hint" class="badge badge-info badge-large"> 2% OFF</span>
+                    <img class="card-img-top" src="https://d3lh2hqqgsec27.cloudfront.net/merchant-images/lg/chipotle.png" id="realcard">
+                    <div class="card-block">
+                        <a href="#" id="cardname">Chipotle Gift Card</a>
+                    </div>
+                </div>
+            </div>
+           <div class="col-md-3">
+		        <div class="card" style="width: 20rem;">
+		            <span id="hint" class="badge badge-info badge-large"> 19% OFF</span>
+                    <img class="card-img-top" src="https://d3lh2hqqgsec27.cloudfront.net/merchant-images/lg/amc.jpg" alt="Card image cap" id="realcard">
+                    <div class="card-block">
+                        <a href="#" id="cardname">AMC Theatres</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+		        <div class="card" style="width: 20rem;">
+		            <span id="hint" class="badge badge-info badge-large"> 16% OFF</span>
+                    <img class="card-img-top" src="https://d3lh2hqqgsec27.cloudfront.net/merchant-images/lg/fandango.png" id="realcard">
+                    <div class="card-block">
+                        <a href="#" id="cardname"> Fandango Gift Card</a>
+                    </div>
+                </div>
+            </div>
+          </div>
+	    </div>
+	</div>
+	<br>
+	<div class="row" id="cardlist">
+	    <div class="col-md-12">
+	      <div class="card-deck">
+	        <div class="col-md-3">
+		        <div class="card" style="width: 20rem;">
+		            <span id="hint" class="badge badge-info badge-large"> 24% OFF</span>
+                    <img class="card-img-top" src="https://d3lh2hqqgsec27.cloudfront.net/merchant-images/lg/forever-21.png" alt="Card image cap" id="realcard">
+                    <div class="card-block">
+                        <a href="#" id="cardname">Forever 21 Gift Card</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+		        <div class="card" style="width: 20rem;">
+		            <span id="hint" class="badge badge-info badge-large"> 10% OFF</span>
+                    <img class="card-img-top" src="https://d3lh2hqqgsec27.cloudfront.net/merchant-images/lg/tj-maxx.png" id="realcard">
+                    <div class="card-block">
+                        <a href="#" id="cardname">TJ Maxx Gift Card</a>
+                    </div>
+                </div>
+            </div>
+           <div class="col-md-3">
+		        <div class="card" style="width: 20rem;">
+		            <span id="hint" class="badge badge-info badge-large"> 5% OFF</span>
+                    <img class="card-img-top" src="https://d3lh2hqqgsec27.cloudfront.net/merchant-images/lg/subway.png" alt="Card image cap" id="realcard">
+                    <div class="card-block">
+                        <a href="#" id="cardname">Subway Gift Card</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+		        <div class="card" style="width: 20rem;">
+		            <span id="hint" class="badge badge-info badge-large"> 9% OFF</span>
+                    <img class="card-img-top" src="https://d3lh2hqqgsec27.cloudfront.net/merchant-images/lg/nordstrom.png" id="realcard">
+                    <div class="card-block">
+                        <a href="#" id="cardname"> Nordstorm Gift Card</a>
+                    </div>
+                </div>
+            </div>
+          </div>
+	    </div>
+	</div>
+	<br>
+	<div class="row" id="cardlist">
+	    <!-- <div class="col-md-7" style="position:absolute; padding-left:15%"> -->
+		<div class="card" style="border: 0; padding-left:20%">
+            <div class="card-block" style="border:2px solid #6a1b9a; color:#6a1b9a; font-weight: bold;width: 27rem;" >
+                <a href="#" id="viewall"><span style="text-align: center;">VIEW ALL DISCOUNT GIFT CARDS</span></a>
+            </div>
+        </div>
+        <!-- </div> -->
+    </div>
+    <br>
+	<!-- Card List End -->
+    <div class="row " id="sellgiftcard" >
+		<div class="col-md-12" style="padding-left:35%">
+		    <div class="col-md-7" >
+		        <h1 style="text-align: center;">Sell Your Gift Card</h1>
+		    </div>
+		</div>
+		<div class="col-md-12" style="padding-left:35%">
+		    <div class="col-md-7" style="text-align: center;">
+			    <p>Find the best offer for your unwanted gift card with Gift Card Granny. Granny provides you with a side-by-side comparison of the most trusted gift card buyers, ensuring you get the most money for your gift card.</p>
+		    </div>
+		</div>
+		<div class="col-md-4" style="padding-left:45%;">
+			<a class="btn btn-default">SELL GIFT CARD</a>
+		</div>
+		<br>
+	</div>
+	<div class="row" >
+        <p1 style="font-size:36px; padding-left:30%">Everyone Loves Gift Card Granny</p1><br>
+        <div class="col-md-10" style="text-align: center; padding-left:28%">
+            <p2>Gift Card Granny is the ultimate source when it comes to saving money on gift cards. Read what people are saying about Gift Card Granny.</p2>
+        </div>
+	</div>
+	<br>
+	<br>
+	<div class="row">
+	    <div class="col-md-4" style="padding-left:25%">
+	        <p style="font-size:25px;">Great</p>
+	        <span class="glyphicon glyphicon-star" style="color:green;"></span>
+	        <span class="glyphicon glyphicon-star" style="color:green;"></span>
+	        <span class="glyphicon glyphicon-star" style="color:green; "></span>
+	        <span class="glyphicon glyphicon-star" style="color:green;"></span>
+	    </div>
+	    <div class="col-md-8">
+	        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                  <li data-target="#review" data-slide-to="0" class="active"></li>
+                  <li data-target="#review" data-slide-to="1"></li>
+                  <li data-target="#review" data-slide-to="2"></li>
+                </ol>
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <h1>Hello1</h1>
+                    </div>
+                    <div class="item">
+                        <h1>Hello2</h1>
+                    </div>
+                    <div class="item">
+                      <h1>Hello3</h1>
+                    </div>
+                </div>
+
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#review" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#review" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+            </div>
+	    </div>
+	</div>
+	<br>
+	<br>
+	<div class="row">
+	    <div class="col-md-12" style="background-color:#DCDCDC; padding-left:5%">
+	        <ul class="list-inline">
+                <li><h3><span class="label label-default label-large">As Seen On</span></h3></li>
+                <li><h3><span class="label label-default label-large">CNN</span></h3></li>
+                <li><h3><span class="label label-default label-large">Fox News</span></h3></li>
+                <li><h3><span class="label label-default label-large">Time</span></h3></li>
+                <li><h3><span class="label label-default label-large">Forbes</span></h3></li>
+                <li><h3><span class="label label-default label-large">Kiplinger</span></h3></li>
+                <li><h3><span class="label label-default label-large">early show</span></h3></li>
+                <li><h3><span class="label label-default label-large">The Huffington Post</span></h3></li>
+                <li><h3><span class="label label-default label-large">The Washington Post</span></h3></li>
+            </ul>
+	    </div>
+	</div>
+	<div class="row" style="background-color:#616161; padding:1%">
+	    <div class="col-md-5">
+	        <p style="font-size:20px; color:#DCDCDC">FOLLOW GRANNY <i class="glyphicon glyphicon-envelope"></i> <i class="glyphicon glyphicon-envelope"></i> <i class="glyphicon glyphicon-envelope"></i></p>
+        </div>
+        <div class="col-md-5" style="float:right">
+	        <i class="glyphicon glyphicon-cloud"></i><a href="#" style="text-decoration: underline;
+        color:white;"> FOLLOW GRANNY DOWNLOAD GRANNY'S CHROME EXTENSION</a></p>
+	    </div>
+	</div>
+	<div class="row">
+	    <div col="col-md-1">
+	       <h3>About Gift Card</h3>
+
+	    </div>
+	    <div col="col-md-3">
+	    </div>
+	    <div col="col-md-1">
+	    </div>
+	    <div col="col-md-3">
+	    </div>
+	    <div col="col-md-1">
+	    </div>
+	    <div col="col-md-3">
+	    </div>
+        <div col="col-md-1">
+	    </div>
+	</div>
+</div>
+
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
